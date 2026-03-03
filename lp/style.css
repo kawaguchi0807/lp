@@ -1,0 +1,157 @@
+/* ============================================================ */
+/* FONT FAMILY UTILITIES                                        */
+/* ============================================================ */
+
+/* Noto Sans JP */
+.font-noto-regular {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+}
+.font-noto-medium {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+}
+.font-noto-bold {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+}
+
+/* Inter */
+.font-inter-light {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+.font-inter-regular {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+.font-inter-medium {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+.font-inter-semibold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+.font-inter-bold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+/* Ten Mincho (serif display) */
+.font-tenmincho {
+  font-family: 'Ten Mincho Text', 'Noto Serif JP', serif;
+  font-weight: 400;
+}
+
+/* ============================================================ */
+/* GLOBAL BASE                                                  */
+/* ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #f1f1f1;
+  color: #131314;
+}
+
+/* ============================================================ */
+/* COLUMN GRID GUIDE (decorative background)                   */
+/* ============================================================ */
+
+.col-guide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: stretch;
+  pointer-events: none;
+  z-index: 0;
+}
+.col-guide > div {
+  flex: 1;
+  border-right: 1px solid #cdcdcd;
+}
+.col-guide > div:last-child {
+  border-right: none;
+}
+
+/* ============================================================ */
+/* HEADER                                                       */
+/* ============================================================ */
+
+header {
+  background: #f1f1f1;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* ============================================================ */
+/* MERIT CARDS — number watermark                              */
+/* ============================================================ */
+
+.merit-number {
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 340px;
+  line-height: 1;
+  letter-spacing: -13.6px;
+  color: rgba(255, 255, 255, 0.2);
+  right: -20px;
+  top: -50px;
+  pointer-events: none;
+  user-select: none;
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================================ */
+/* CASE SLIDER                                                  */
+/* ============================================================ */
+
+.case-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+/* ============================================================ */
+/* FAQ ACCORDION (JS-driven)                                   */
+/* ============================================================ */
+
+.faq-answer {
+  display: none;
+}
+.faq-item.open .faq-answer {
+  display: flex;
+}
+.faq-item.open .faq-arrow {
+  transform: rotate(0deg);
+}
+.faq-item:not(.open) .faq-arrow {
+  transform: rotate(180deg);
+}
+
+/* ============================================================ */
+/* SMOOTH HOVER TRANSITIONS                                     */
+/* ============================================================ */
+
+a, button {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+a:hover {
+  opacity: 0.85;
+}
